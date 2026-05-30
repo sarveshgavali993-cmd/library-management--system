@@ -1,0 +1,18 @@
+-- Select all columns from a table
+SELECT * FROM users;
+
+-- Select specific columns with a filter condition
+SELECT first_name, email 
+FROM users 
+WHERE country = 'USA' AND status = 'Active';
+
+-- Sort results in descending order
+SELECT product_name, price 
+FROM products 
+ORDER BY price DESC;
+
+-- Group data and calculate aggregates
+SELECT department, COUNT(employee_id) AS total_staff, AVG(salary) AS average_salary
+FROM employees
+GROUP BY department
+HAVING AVG(salary) > 50000;
